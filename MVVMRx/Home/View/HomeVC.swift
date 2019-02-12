@@ -17,32 +17,9 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var albumsVCView: UIView!
     
-    private lazy var albumsViewController: AlbumsCollectionViewVC = {
-        // Load Storyboard
-        let storyboard = UIStoryboard(name: "Home", bundle: Bundle.main)
-        
-        // Instantiate View Controller
-        var viewController = storyboard.instantiateViewController(withIdentifier: "AlbumsCollectionViewVC") as! AlbumsCollectionViewVC
-        
-        // Add View Controller as Child View Controller
-        self.add(asChildViewController: viewController, to: albumsVCView)
-        
-        return viewController
-    }()
+    private var albumsViewController: AlbumsCollectionViewVC!
     
-    
-    private lazy var tracksViewController: TracksTableViewVC = {
-        // Load Storyboard
-        let storyboard = UIStoryboard(name: "Home", bundle: Bundle.main)
-        
-        // Instantiate View Controller
-        var viewController = storyboard.instantiateViewController(withIdentifier: "TracksTableViewVC") as! TracksTableViewVC
-        
-        // Add View Controller as Child View Controller
-        self.add(asChildViewController: viewController, to: tracksVCView)
-        
-        return viewController
-    }()
+    private var tracksViewController: TracksTableViewVC!
     
     
     var homeViewModel = HomeViewModel()
@@ -101,5 +78,23 @@ class HomeVC: UIViewController {
             .bind(to: tracksViewController.tracks)
             .disposed(by: disposeBag)
        
+    }
+
+    // MARK:- Storyboard Segue
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        switch segue.identifier {
+        case "AlbumsCollectionViewVCEmbedSegue":
+            if let albumsCollectionViewVC = segue.destination as? AlbumsCollectionViewVC {
+                self.albumsViewController = albumsCollectionViewVC
+            }
+        case "TracksTableViewVCEmbedSegue":
+            if let albumsCollectionViewVC = segue.destination as? TracksTableViewVC {
+                self.tracksViewController = albumsCollectionViewVC
+            }
+        default:
+            break
+        }
     }
 }
