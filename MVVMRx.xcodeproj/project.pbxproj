@@ -17,7 +17,6 @@
 		15681F2C215CFDCC00E535E5 /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15681F2A215CFDCC00E535E5 /* MessageView.xib */; };
 		15681F2D215CFDCC00E535E5 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15681F2B215CFDCC00E535E5 /* MessageView.swift */; };
 		15681F32215CFDD700E535E5 /* LoadingViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15681F2E215CFDD700E535E5 /* LoadingViewable.swift */; };
-		15681F33215CFDD700E535E5 /* loadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15681F2F215CFDD700E535E5 /* loadingView.swift */; };
 		15681F34215CFDD700E535E5 /* AnimateloadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15681F30215CFDD700E535E5 /* AnimateloadingView.swift */; };
 		15681F35215CFDD700E535E5 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15681F31215CFDD700E535E5 /* LoadingView.xib */; };
 		15681F3A215CFE1100E535E5 /* TracksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15681F36215CFE1100E535E5 /* TracksTableViewCell.xib */; };
@@ -30,6 +29,7 @@
 		15681F46215D001F00E535E5 /* Extensiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15681F45215D001F00E535E5 /* Extensiones.swift */; };
 		15681F48215D019100E535E5 /* ReactiveExtensiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15681F47215D019100E535E5 /* ReactiveExtensiones.swift */; };
 		15681F4A215D01A700E535E5 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15681F49215D01A700E535E5 /* Network.swift */; };
+		AFED0C542212DA8500E07689 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFED0C532212DA8400E07689 /* LoadingView.swift */; };
 		E0CCA68EE206B60DE099FAAC /* Pods_MVVMRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F064858F372B2F3B0B0774 /* Pods_MVVMRx.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +46,6 @@
 		15681F2A215CFDCC00E535E5 /* MessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
 		15681F2B215CFDCC00E535E5 /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		15681F2E215CFDD700E535E5 /* LoadingViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewable.swift; sourceTree = "<group>"; };
-		15681F2F215CFDD700E535E5 /* loadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadingView.swift; sourceTree = "<group>"; };
 		15681F30215CFDD700E535E5 /* AnimateloadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateloadingView.swift; sourceTree = "<group>"; };
 		15681F31215CFDD700E535E5 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		15681F36215CFE1100E535E5 /* TracksTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TracksTableViewCell.xib; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		27F064858F372B2F3B0B0774 /* Pods_MVVMRx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMRx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62C1D3CCE5CAD20B6F1FAA9F /* Pods-MVVMRx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMRx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMRx/Pods-MVVMRx.debug.xcconfig"; sourceTree = "<group>"; };
 		80B223B75565FB583B9B7248 /* Pods-MVVMRx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMRx.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMRx/Pods-MVVMRx.release.xcconfig"; sourceTree = "<group>"; };
+		AFED0C532212DA8400E07689 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,8 +167,8 @@
 		15681F29215CFDBB00E535E5 /* LoadingView */ = {
 			isa = PBXGroup;
 			children = (
+				AFED0C532212DA8400E07689 /* LoadingView.swift */,
 				15681F30215CFDD700E535E5 /* AnimateloadingView.swift */,
-				15681F2F215CFDD700E535E5 /* loadingView.swift */,
 				15681F31215CFDD700E535E5 /* LoadingView.xib */,
 				15681F2E215CFDD700E535E5 /* LoadingViewable.swift */,
 			);
@@ -264,6 +264,7 @@
 				TargetAttributes = {
 					156429CC215CE0C70072C01E = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -350,12 +351,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15681F33215CFDD700E535E5 /* loadingView.swift in Sources */,
 				156429D3215CE0C80072C01E /* HomeVC.swift in Sources */,
 				15681F4A215D01A700E535E5 /* Network.swift in Sources */,
 				15681F3C215CFE1100E535E5 /* AlbumsCollectionViewCell.swift in Sources */,
 				15681F41215CFE3200E535E5 /* AlbumsCollectionViewVC.swift in Sources */,
 				15681F40215CFE3200E535E5 /* TracksTableViewVC.swift in Sources */,
+				AFED0C542212DA8500E07689 /* LoadingView.swift in Sources */,
 				15681F46215D001F00E535E5 /* Extensiones.swift in Sources */,
 				15681F32215CFDD700E535E5 /* LoadingViewable.swift in Sources */,
 				15681F34215CFDD700E535E5 /* AnimateloadingView.swift in Sources */,
@@ -522,7 +523,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = storm.MVVMRx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -542,7 +543,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = storm.MVVMRx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

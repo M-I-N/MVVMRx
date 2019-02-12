@@ -25,6 +25,7 @@ class TracksTableViewVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBinding()
+        tracksTableView.backgroundColor = .clear
     }
     
     
