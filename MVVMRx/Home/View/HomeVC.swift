@@ -30,7 +30,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addBlurArea(area: self.view.frame, style: .dark)
+        view.addBlurEffect(style: .dark)
         setupBindings()
         homeViewModel.requestData()
     }
@@ -49,15 +49,10 @@ class HomeVC: UIViewController {
         // observing errors to show
         
         homeViewModel
-            .error
+            .errorMessage
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { (error) in
-                switch error {
-                case .internetError(let message):
-                    MessageView.sharedInstance.showOnView(message: message, theme: .error)
-                case .serverMessage(let message):
-                    MessageView.sharedInstance.showOnView(message: message, theme: .warning)
-                }
+            .subscribe(onNext: { (errorMessage) in
+                MessageView.sharedInstance.showOnView(message: errorMessage, theme: .error)
             })
             .disposed(by: disposeBag)
         
