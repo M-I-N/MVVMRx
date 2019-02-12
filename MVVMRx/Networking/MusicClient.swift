@@ -11,7 +11,7 @@ import Foundation
 final class MusicClient {
     
     private lazy var baseURL: URL = {
-        return URL(string: "https://gist.githubusercontent.com/mohammadZ74/")!
+        return URL(string: "https://gist.githubusercontent.com/M-I-N/")!
     }()
     
     let session: URLSession

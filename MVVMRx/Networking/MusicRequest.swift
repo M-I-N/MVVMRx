@@ -10,7 +10,7 @@ import Foundation
 
 struct MusicRequest {
     var path: String {
-        return "dcd86ebedb5e519fd7b09b79dd4e4558/raw/b7505a54339f965413f5d9feb05b67fb7d0e464e/MvvmExampleApi.json"
+        return "53d89cbe0d26f0d9f9c65385d7c78a2b/raw/b82c7c3ef8f0e8e5f91a98d981d552834d6b8eba/MvvmExampleApi.json"
     }
     
     let parameters: Parameters
