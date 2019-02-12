@@ -7,7 +7,6 @@ target 'MVVMRx' do
 
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'SwiftyJSON'
 
   # Pods for MVVMRx
 
