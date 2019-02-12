@@ -27,16 +27,19 @@ final class MusicClient {
             guard let httpResponse = response as? HTTPURLResponse,
                 httpResponse.hasSuccessStatusCode,
                 let data = data else {
+                    print(error.debugDescription)
                     completion(.failure(.network))
                     return
             }
             
-            guard let decodedResponse = try? JSONDecoder().decode(MusicResponse.self, from: data) else {
+            do {
+                let decodedResponse = try JSONDecoder().decode(MusicResponse.self, from: data)
+                completion(.success(decodedResponse))
+            } catch {
+                print(error)
                 completion(.failure(.decoding))
-                return
             }
             
-            completion(.success(decodedResponse))
         }.resume()
     }
 }
